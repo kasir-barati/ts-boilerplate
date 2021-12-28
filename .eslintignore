@@ -1,1 +1,4 @@
-/**/*.js
+dist
+.github
+.husky
+node_modules
