@@ -15,8 +15,6 @@ RUN mkdir -p /app && chown -R 1000:1000 /app
 
 WORKDIR /app
 
-ENV NODE_PATH=/usr/local/lib/node_modules/
-
 COPY --chown=1000:1000 --from=copy_stage /app .
 
 EXPOSE ${APP_PORT}

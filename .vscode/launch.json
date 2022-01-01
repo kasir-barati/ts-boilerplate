@@ -17,8 +17,8 @@
             "outFiles": ["${workspaceFolder}/dist/src/**/*.js"], // all compiled JavaScript files
             "preLaunchTask": "tsc-watch",
             "sourceMaps": true,
-            "protocol": "auto"
-            // "protocol": "inspector"
+            // "protocol": "auto"
+            "protocol": "inspector"
         }
     ]
 }

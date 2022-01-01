@@ -1,7 +1,7 @@
 {
     "verbose": true,
-    "watch": ["src"],
-    "ext": "ts,js,html,json,yml,css",
+    "watch": ["."],
+    "ext": "*.ts,*.js,*.json,*.yml",
     "env": {
         "NODE_ENV": "development"
     },
@@ -9,12 +9,9 @@
         ".git",
         "node_modules/**/node_modules",
         "logs/",
-        "dist/",
         "pgdata"
     ],
-    "exec": "npm run clean && npm run build && npm run lint && node --nolazy --harmony ./dist/main.js",
+    "exec": "node --inspect=0.0.0.0:5870 --require ts-node/register src/main.ts",
     "restartable": "rs",
-    "execMap": {
-        "js": "node --inspect=0.0.0.0:5870 --nolazy --harmony --harmony-top-level-await --abort-on-uncaught-exception --unhandled-rejections='strict'"
-    }
+    "legacyWatch": true
 }

@@ -27,47 +27,59 @@
 
 This project is intended to be used with the latest Active LTS release of [Node.js][nodejs].
 
-### Use as a repository template
+1. **First step** is to clone/use this repo as your project template/download it as zip file
 
-To start, just click the **[Use template][repo-template-action]** link (or the green button). Start adding your code in the `src` and unit tests in the `__tests__` directories.
+    ### Use as a repository template
 
-### Clone repository
+    To start, just click the **[Use template][repo-template-action]** link (or the green button). Start adding your code in the `src` and unit tests in the `__tests__` directories.
 
-To clone the repository, use the following commands:
+    ### Clone repository
 
-```sh
-git clone https://github.com/nodejsdeveloperskh/node-typescript-boilerplate
-cd node-typescript-boilerplate
-npm install
-```
+    To clone the repository, use the following commands:
 
-### Download latest release
+    ```sh
+    git clone https://github.com/nodejsdeveloperskh/node-typescript-boilerplate
+    cd node-typescript-boilerplate
+    npm install
+    ```
 
-Download and unzip the current **main** branch or one of the tags:
+    ### Download latest release
 
-```sh
-wget https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/archive/main.zip -O node-typescript-boilerplate.zip
-unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
-```
+    Download and unzip the current **main** branch or one of the tags:
+
+    ```sh
+    wget https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/archive/main.zip -O node-typescript-boilerplate.zip
+    unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
+    ```
+
+2. Insert/Update the .env. Obviously you have to have `.env` file first. So please do this: `cp .env.example .env`
+3. Now Everything is as simple as running one command: `npm run docker-up:build` to build and create docker containers. All the dependencies and devDependencies will be installed in the created image. <span style="color: red">Note</span>: use this command if you had a change in you `package.json`, Things like adding new 3rd party package or removing a package
 
 ## Available Scripts
 
--   `clean` - remove coverage data, Jest cache and transpiled files,
+-   `clean` - remove coverage data, Jest cache and transpiled files (dist directory),
 -   `prebuild` - lint source files and tests before building,
 -   `build` - transpile TypeScript to ES6,
 -   `build:watch` - interactive watch mode to automatically transpile source files,
 -   `lint` - lint source files and tests,
--   `test` - run tests,
+-   `test:cov` - Run coverage tests,
+-   `test:e2e` - Run E2E tests.
 -   `test:watch` - interactive watch mode to automatically re-run tests
 -   `format` - prettier your codes
 -   `prepare` - activate the husky
+-   `start` - Start application in production mode
+-   `start:dev` - Start application in development mode
+-   `watch` - Run tsc to compile project in development mode
+-   `docker-up` - Run the application in development mode in Docker without re-building image.
+-   `docker-up:build` - Run the Application in development but rebuild the image.
+-   `docker-down` - Stop containers and remove the orphans too.
 
 ## Additional Information
 
 ### Why I do not use [Volta][volta] or any other similar tool in this project boilerplate
 
 Thanks to Docker we do not need to take care about anything. So actually we have to run our project in docker containers and now I cure our patient from the root. :star_struck:
-Instructions to run the application:
+Instructions to run the application with `docker` commands although my suggestion is using `npm run docker-up:build`:
 
 -   `docker-compose up --build` build and create containers for the production environment
 -   `docker-compose -f dev.docker-compose.yml up --build` build image and create the containers. Per change in `Dockerfile` please rerun this command
