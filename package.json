@@ -29,7 +29,10 @@
         "test:watch": "jest --watch",
         "format": "prettier --write '**/*.{ts,js,json,md}'",
         "watch": "tsc -w -p ./",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "docker-up": "docker-compose -f dev.docker-compose.yml up",
+        "docker-up:build": "docker-compose -f dev.docker-compose.yml up --build",
+        "docker-down": "docker-compose -f dev.docker-compose.yml down --remove-orphans"
     },
     "author": "nodejsdeveloperskh",
     "license": "Apache-2.0",
