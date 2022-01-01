@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  api-dev:
+    image: ${COMPOSE_PROJECT_NAME}-dev:latest
+    container_name: "${COMPOSE_PROJECT_NAME}-dev-${APP_NAME}"
+    restart: always
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+        volume:
+          nocopy: true
+    build:
+      context: .
+      dockerfile: ./dev.Dockerfile
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+      - "${DEBUGGING_PORT}:${DEBUGGING_PORT}"
+    environment:
+      NODE_ENV: development
+    env_file:
+      - ./.env

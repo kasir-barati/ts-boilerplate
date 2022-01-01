@@ -1,3 +1,7 @@
+import process from 'process';
+
+const stop = false;
+
 /**
  * Some predefined delay values (in milliseconds).
  */
@@ -30,3 +34,11 @@ function delayedHello(
 export async function greeter(name: string) {
     return await delayedHello(name, Delays.Long);
 }
+
+(function stopFromExit() {
+    if (!stop) {
+        process.nextTick(stopFromExit);
+    } else {
+        console.log('Hello world');
+    }
+})();

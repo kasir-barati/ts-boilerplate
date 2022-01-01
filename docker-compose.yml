@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  api:
+    image: ${COMPOSE_PROJECT_NAME}-dev:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: "${COMPOSE_PROJECT_NAME}-${APP_NAME}"
+    restart: always
+    volumes:
+      - type: bind
+        source: ./asset
+        target: /app/asset
+        volume:
+          nocopy: true
+      - type: bind
+        source: .env
+        target: /app/.env
+        volume:
+          nocopy: true
+    environment:
+      NODE_ENV: production
+    env_file:
+      - ./.env
+    networks:
+      - default

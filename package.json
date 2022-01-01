@@ -19,6 +19,7 @@
     },
     "scripts": {
         "start": "node dist/src/main.js",
+        "start:dev": "npm run clean && tsc && nodemon",
         "clean": "rimraf coverage dist tmp",
         "prebuild": "npm run lint",
         "build": "tsc -p tsconfig.build.json",
@@ -26,13 +27,15 @@
         "lint": "eslint",
         "test": "jest --coverage",
         "test:watch": "jest --watch",
-        "format": "prettier --write '**/*.js' '**/*.ts' '**/*.json'",
+        "format": "prettier --write '**/*.{ts,js,json,md}'",
+        "watch": "tsc -w -p ./",
         "prepare": "husky install"
     },
     "author": "nodejsdeveloperskh",
     "license": "Apache-2.0",
     "dependencies": {
         "husky": "^7.0.4",
+        "nodemon": "^2.0.15",
         "tslib": "~2.3.1"
     },
     "types": "./dist/index.d.ts",
@@ -43,5 +46,18 @@
     ],
     "engines": {
         "node": ">= 16.13 <17"
-    }
+    },
+    "keywords": [
+        "template",
+        "boilerplate",
+        "husky",
+        "docker",
+        "docker-compose",
+        "jest",
+        "eslint",
+        "nodemon",
+        "debug-in-vscode",
+        "typescript",
+        "nodejs"
+    ]
 }

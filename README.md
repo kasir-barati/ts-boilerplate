@@ -67,6 +67,11 @@ unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
 ### Why I do not use [Volta][volta] or any other similar tool in this project boilerplate
 
 Thanks to Docker we do not need to take care about anything. So actually we have to run our project in docker containers and now I cure our patient from the root. :star_struck:
+Instructions to run the application:
+
+-   `docker-compose up --build` build and create containers for the production environment
+-   `docker-compose -f dev.docker-compose.yml up --build` build image and create the containers. Per change in `Dockerfile` please rerun this command
+-   `docker-compose -f dev.docker-compose.yml down --remove-orphans` stop and remove the containers.
 
 ### Writing tests in JavaScript
 

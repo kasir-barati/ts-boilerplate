@@ -12,10 +12,6 @@ coverage
 # Transpiled files
 dist
 
-# VS Code
-.vscode
-!.vscode/tasks.js
-
 # JetBrains IDEs
 .idea/
 

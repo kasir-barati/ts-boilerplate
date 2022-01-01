@@ -1,0 +1,69 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode_custom_css.policy": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[raml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.documentSelectors": ["**/*.raml"],
+
+    "workbench.colorCustomizations": {
+        "editorLineNumber.activeForeground": "#ffee00",
+        "activityBar.background": "#c26620",
+        "activityBar.activeBackground": "#fff",
+        "activityBar.foreground": "#000",
+        "activityBar.inactiveForeground": "#fff",
+        "activityBar.activeBorder": "#fff",
+        "activityBarBadge.background": "#fff",
+        "activityBarBadge.foreground": "#000"
+    },
+    "files.exclude": {
+        ".vscode": false,
+        "**/package-lock.json": true,
+        "pgdata": true
+    },
+    "cSpell.words": [
+        "ecommerce",
+        "pgdata",
+        "postgres",
+        "postgresql",
+        "traefik",
+        "unprocessable",
+        "upsert"
+    ],
+    "javascript.suggest.autoImports": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
