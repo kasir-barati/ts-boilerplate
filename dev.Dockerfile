@@ -9,7 +9,7 @@ RUN npm config set registry https://registry.npmjs.org/ && npm config set maxsoc
 RUN npm ci --loglevel verbose
 
 # Creating isolated image with the installed pacakges inside node_modules
-FROM node:16.13-buster
+FROM node:16.13-alpine
 
 RUN mkdir -p /app && chown -R 1000:1000 /app
 
