@@ -38,7 +38,7 @@ This project is intended to be used with the latest Active LTS release of [Node.
     To clone the repository, use the following commands:
 
     ```sh
-    git clone https://github.com/nodejsdeveloperskh/node-typescript-boilerplate
+    git clone https://github.com/kasir-barati/node-typescript-boilerplate
     cd node-typescript-boilerplate
     npm install
     ```
@@ -48,7 +48,7 @@ This project is intended to be used with the latest Active LTS release of [Node.
     Download and unzip the current **main** branch or one of the tags:
 
     ```sh
-    wget https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/archive/main.zip -O node-typescript-boilerplate.zip
+    wget https://github.com/kasir-barati/node-typescript-boilerplate/archive/main.zip -O node-typescript-boilerplate.zip
     unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
     ```
 
@@ -97,23 +97,23 @@ Support this project by becoming a [sponsor][sponsor].
 
 ## License
 
-Licensed under the APLv2. See the [LICENSE](https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/blob/main/LICENSE) file for details.
+Licensed under the APLv2. See the [LICENSE](https://github.com/kasir-barati/node-typescript-boilerplate/blob/main/LICENSE) file for details.
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.5-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.13-blue.svg
 [nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
-[gha-badge]: https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/actions/workflows/nodejs.yml/badge.svg
-[gha-ci]: https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/actions/workflows/nodejs.yml
+[gha-badge]: https://github.com/kasir-barati/node-typescript-boilerplate/actions/workflows/nodejs.yml/badge.svg
+[gha-ci]: https://github.com/kasir-barati/node-typescript-boilerplate/actions/workflows/nodejs.yml
 [typescript]: https://www.typescriptlang.org/
 [typescript-4-5]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
-[license]: https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/blob/main/LICENSE
+[license]: https://github.com/kasir-barati/node-typescript-boilerplate/blob/main/LICENSE
 [sponsor-badge]: https://img.shields.io/badge/♥-Sponsor-fc0fb5.svg
-[sponsor]: https://github.com/sponsors/nodejsdeveloperskh
+[sponsor]: https://github.com/sponsors/kasir-barati
 [jest]: https://facebook.github.io/jest/
 [eslint]: https://github.com/eslint/eslint
 [jest-wiki]: https://jestjs.io/docs/getting-started
 [prettier]: https://prettier.io
 [gh-actions]: https://github.com/features/actions
-[repo-template-action]: https://github.com/nodejsdeveloperskh/node-typescript-boilerplate/generate
+[repo-template-action]: https://github.com/kasir-barati/node-typescript-boilerplate/generate
 [husky]: https://www.npmjs.com/package/husky
