@@ -21,7 +21,6 @@
 -   Example configuration for [GitHub Actions][gh-actions]
 -   `pre-commit` and `pre-push` [husky][husky] hooks
 
-🤲 Free as in speech: available under the APLv2 license.
 
 ## Getting Started
 

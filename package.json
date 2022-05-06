@@ -1,6 +1,7 @@
 {
     "name": "node-typescript-boilerplate",
     "version": "0.0.0",
+    "license": "GPL-3.0",
     "description": "Node.js development in TypeScript",
     "devDependencies": {
         "@types/jest": "~27.0.2",
@@ -37,7 +38,6 @@
         "docker-down": "docker-compose -f dev.docker-compose.yml down --remove-orphans"
     },
     "author": "kasir-barati",
-    "license": "Apache-2.0",
     "dependencies": {
         "husky": "^7.0.4",
         "nodemon": "^2.0.15",
