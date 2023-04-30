@@ -1,9 +1,14 @@
+# /**/*.js
 dist
+build
+build_keycloak
+node_modules
 .github
 .husky
-node_modules
 **/*.yml
 **/*.json
 **/*.md
 **/Dockerfile
 docs/**/*.*
+.eslintrc.js
+coverage
