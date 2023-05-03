@@ -49,12 +49,6 @@
         "compose:down": "docker compose -f dev.docker-compose.yml down --volumes && pnpm run terraform:rm"
     },
     "author": "kasir-barati",
-    "types": "./dist/index.d.ts",
-    "typings": "dist/index.d.ts",
-    "files": [
-        "dist",
-        "src"
-    ],
     "engines": {
         "node": ">=18"
     },
