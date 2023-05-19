@@ -1,0 +1,61 @@
+name: Deploy Code
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+
+permissions:
+  contents: write
+
+env:
+  NODE_VERSION: 18.16.0
+  PNPM_VERSION: 7
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js ${{env.NODE_VERSION}}
+        uses: actions/setup-node@v3
+        with:
+          node_version: ${{env.NODE_VERSION}}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: ${{env.PNPM_VERSION}}
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=${pnpm store path}" >> $GITHUB_OUTPUT
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{steps.pnpm-cache.outputs.STORE_PATH}}
+          key: ${{runner.os}}-pnpm-store-${{hashFiles('**/pnpm-lock.yml')}}
+          restore-keys: |
+            ${{runner.os}}-pnpm-store-
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+      - name: Build frontend
+        run: pnpm build:frontend
+      - name: Deploy on AWS S3
+        uses: reggionick/s3-deploy@v3
+        with:
+          # TODO: Is this path correct?
+          folder: apps/frontend/dist
+          # TODO: use the same secret in terraform
+          bucket: ${{secret.FRONTEND_BUCKET_NAME}}
+          bucket-region: ${{secret.BUCKET_REGION}}
+          # Should I use CloudFront or not?
+          # dist-id: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}}
+          # invalidation: /
+          delete-removed: true
+          no-cache: true
+          private: true
